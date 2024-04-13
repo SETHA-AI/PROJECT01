@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+body{
+    background-color: #004065;
+    background-image: linear-gradient(123deg, #002439 0%, #305e59 100%);
+
+}
+#navBar{
+    position: fixed;
+    top: 0;
+    transition: .4s;
+    z-index: 999;
+}
+#card{
+    display: block;
+}
+#images{
+    transition: all .5s ease;
+}
+#images:hover{
+    transform: scale(1, .95);
+    opacity: .6;
+}
+::-webkit-scrollbar{
+    width: 0px;
+}
+#header{
+    width: 100%;
+    height: 500px;
+    margin-top: 50px;
+}
+
+#HTML,#JavaScript,#CSS,#BS{
+    transition: 1s;
+}
+#HTML:hover{
+    color: orangered;
+    opacity: 5;
+    transition: 2s;
+}
+#CSS:hover{
+    color: rgb(29, 29, 251);
+    opacity: 5;
+    transition: 2s;
+
+}
+
+#JavaScript:hover{
+    color: yellow;
+    opacity: 5;
+    transition: 2s;
+
+}
+
+#BS:hover{
+    color: rgb(255, 3, 255);
+    opacity: 5;
+    transition: 2s;
+
+}
+
+h5:hover{
+    cursor: pointer;
+    color: orange;
+}
+
+#container{
+    width: 100%;
+    height: 300px;
+    background: #111;
+    padding: 20px 30px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#container .star-weight input{
+    display: none;
+}
+.star-weight label{
+    font-size: 40px;
+    color: #444;
+    padding: 10px;
+    float: right;
+    transition: all 0.2s ease;
+}
+input:not(:checked) ~label:hover,
+input:not(:checked) ~label:hover ~label{
+    color: #fd4;
+}
+input:checked ~ label{
+    color: #fd4;
+}
+header{
+    font-size: 30px;
+    color: #fd4;
+}
+input#rate-5:checked ~ header::before{
+    content: 'I love it 💖';
+}
+input#rate-4:checked ~ header::before{
+    content: 'I like it 👌';
+}
+input#rate-3:checked ~ header::before{
+    content: 'I don\'t know 🤨';
+}
+input#rate-2:checked ~ header::before{
+    content: 'I don\'t like it 😣';
+}
+input#rate-1:checked ~ header::before{
+    content: 'I hate it 😡';
+}
